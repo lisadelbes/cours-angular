@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-mon-input',
   template: `
-    <input type="text" style="border: 2px solid #3498db" (keyup)="toto($event)" />
+    <label for="input" m-12> Entrez un nom d'ami </label>
+    <input type="text" id="input" style="border: 2px solid #3498db" (keyup)="toto($event)" />
     <p> {{ tata }}</p>
   `
 })
