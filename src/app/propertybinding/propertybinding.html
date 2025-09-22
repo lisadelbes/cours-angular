@@ -1,0 +1,14 @@
+<h1>Exo binding</h1>
+
+<!-- exemple pour un lien -->
+<!-- <a [href]="liendynamique"> Lien google </a> -->
+
+<div class="user-card">
+  <img [src]="Friends.image" alt="Photo de profil" class="user-image" />
+  <div class="user-info">
+    <p><strong>Âge :</strong> {{ Friends.age }} ans </p>
+    <p><strong>Statut :</strong> {{ Friends.status }}</p>
+    <p class="bio">{{ Friends.bio }}</p>
+    <p> {{ Friends.reputation == "beau gosse" ? 'Cool 😎' : 'ringard 👴' }}</p>
+  </div>
+</div>
