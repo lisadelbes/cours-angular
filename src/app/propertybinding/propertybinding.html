@@ -3,12 +3,34 @@
 <!-- exemple pour un lien -->
 <!-- <a [href]="liendynamique"> Lien google </a> -->
 
-<div class="user-card">
+<!-- Version sans MGMODEL -->
+<!-- <div class="user-card">
   <img [src]="Friends.image" alt="Photo de profil" class="user-image" />
   <div class="user-info">
     <p><strong>Âge :</strong> {{ Friends.age }} ans </p>
     <p><strong>Statut :</strong> {{ Friends.status }}</p>
     <p class="bio">{{ Friends.bio }}</p>
     <p> {{ Friends.reputation == "beau gosse" ? 'Cool 😎' : 'ringard 👴' }}</p>
+  </div>
+</div> -->
+
+Version avec MGMODEL
+<div class="user-card">
+
+  <label for="input" m-12> Entrez l'url de l'image'</label>
+  <input type="text" id="input" style="border: 2px solid #3498db" [(ngModel)]="image" />
+  <img [src]="image" alt="Photo de profil" class="user-image" />
+  
+  <div class="user-info">
+
+    <label for="input" m-12> Entrez l'age </label>
+    <input type="text" id="input" style="border: 2px solid #3498db" [(ngModel)]="age" />
+    <label for="input" m-12> Entrez le statut </label>
+    <input type="text" id="input" style="border: 2px solid #3498db" [(ngModel)]="status" />
+    
+    <p><strong>Âge :</strong> {{ age }} ans </p>
+    <p><strong>Statut :</strong> {{ status }} </p>
+    <p> {{ reputation == "beau gosse" ? 'Cool 😎' : 'ringard 👴' }}</p>
+
   </div>
 </div>

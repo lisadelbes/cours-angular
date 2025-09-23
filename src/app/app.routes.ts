@@ -20,7 +20,7 @@ export const routes: Routes = [
     },
     {
         path:'composntfriend',
-        loadComponent:()=> import('./composntfriend/composntfriend').then(m=>m.MonInputComponent)   
+        loadComponent:()=> import('./composntfriend/composntfriend').then(m=>m.MonInputComponentBis)   
     },
     // a mettre à la fin
     {
