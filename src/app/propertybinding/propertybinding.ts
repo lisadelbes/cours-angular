@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 // Version sans MGModel
 // @Component({
@@ -23,7 +24,7 @@ import {FormsModule} from '@angular/forms';
 // Version avec MGModel
 @Component({
   selector: 'app-propertybinding',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './propertybinding.html',
   styleUrl: './propertybinding.css'
 })
@@ -31,9 +32,11 @@ export class Propertybinding {
 
     image:string = 'https://m.media-amazon.com/images/M/MV5BMGQwY2YzM2ItNDgxOC00NWMwLTgyZmMtNGEzNDI1ZGQ0YzgwXkEyXkFqcGdeQXVyODk1MjAxNzQ@._V1_FMjpg_UX1000_.jpg';
     status:string = 'Online';
-    age:number = 25;
+    age:number = 32;
     bio:string = 'Voici la petite bio de Franklin';
     reputation:string = 'beau gosse';
 }
+
+
 
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 // Exemple sans NGMODEL
 // @Component({
@@ -21,11 +22,13 @@ import {FormsModule} from '@angular/forms';
 
 // exemple avec NGMODEL
 @Component({
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   template: `
     <label for="input" m-12> Entrez un nom d'ami </label>
     <input type="text" id="input" style="border: 2px solid #3498db" [(ngModel)]="tata" />
-    <p> {{ tata }}</p>
+    <p>  {{ tata}} </p>
+    <div *ngIf="tata === ''; else BlockElse"> Aucun ami ajouté. </div>
+    <ng-template #BlockElse> Un ami a été ajouté.</ng-template>
   `
 
 

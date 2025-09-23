@@ -15,7 +15,7 @@
 </div> -->
 
 Version avec MGMODEL
-<div class="user-card">
+<div class="user-card" [ngClass]="{oldman:age > 30?true:false}">
 
   <label for="input" m-12> Entrez l'url de l'image'</label>
   <input type="text" id="input" style="border: 2px solid #3498db" [(ngModel)]="image" />
@@ -29,7 +29,7 @@ Version avec MGMODEL
     <input type="text" id="input" style="border: 2px solid #3498db" [(ngModel)]="status" />
     
     <p><strong>Âge :</strong> {{ age }} ans </p>
-    <p><strong>Statut :</strong> {{ status }} </p>
+    <p [ngStyle]="{color:status=='Online'?'green':'red'}"><strong>Statut :</strong> {{ status }} </p>
     <p> {{ reputation == "beau gosse" ? 'Cool 😎' : 'ringard 👴' }}</p>
 
   </div>
