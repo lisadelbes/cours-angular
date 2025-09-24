@@ -13,14 +13,9 @@
 
     <ul>
         <li *ngFor="let item of lesNombres; let i = index"
-    [ngClass]="{
-      'text-black-300': i >= 5,
-      'bg-green-300': i >= 5
-    }"
-    [ngStyle]="{
-      'color': i < 5 ? 'blue' : 'darkgreen'
-    }"
-  >
+    [ngClass]="{'text-black-300': i >= 4,'bg-green-300': i >= 4}"
+    [ngStyle]="{'color': i < 4 ? 'blue' : 'darkgreen'}"
+    >
     {{ i + 1 }}
         </li>
     </ul>
