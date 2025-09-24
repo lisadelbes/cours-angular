@@ -22,7 +22,16 @@ export const routes: Routes = [
         path:'composntfriend',
         loadComponent:()=> import('./composntfriend/composntfriend').then(m=>m.MonInputComponentBis)   
     },
-    // a mettre à la fin
+    {
+        path:'exo-liste',
+        loadComponent:()=> import('./exo-liste/exo-liste').then(m=>m.ExoListe)   
+    },
+    {
+        path:'directives-parent',
+        loadComponent:()=> import('./directives-parent/directives-parent').then(m=>m.DirectivesParent)   
+    },
+
+    // mettre la page ERREUR à la fin
     {
         path:'**',
         loadComponent:()=> import('./notfound/notfound').then(m=>m.Notfound)

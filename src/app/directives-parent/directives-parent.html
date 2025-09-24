@@ -1,0 +1,18 @@
+<p>directives-parent works!</p>
+
+<div class="flex flex-col items-center gap-4 m-4">
+
+    <h1 class="font-semibold underline">TP directives</h1>
+
+    <button (click)="clikk()" class="btn btn-success"> clique-ici </button>
+
+
+    <p *ngIf="statut===true">{{text}}</p>
+
+</div>
+
+    <ul>
+        <li *ngFor="let item of lesNombres; let i = index" [class.text-black-300]="i >= 5" [class.bg-green-300]="i >= 5">
+            {{i+1}}
+        </li>
+    </ul>
