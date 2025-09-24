@@ -30,6 +30,14 @@ export const routes: Routes = [
         path:'directives-parent',
         loadComponent:()=> import('./directives-parent/directives-parent').then(m=>m.DirectivesParent)   
     },
+    {
+        path:'meteo-api',
+        loadComponent:()=> import('./meteo-api/meteo-api').then(m=>m.MeteoApi)   
+    },
+    {
+        path:'pokemon-list',
+        loadComponent:()=> import('./pokemon-list/pokemon-list').then(m=>m.PokemonList)   
+    },
 
     // mettre la page ERREUR à la fin
     {

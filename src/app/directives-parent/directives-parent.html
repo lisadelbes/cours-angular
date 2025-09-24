@@ -4,8 +4,11 @@
 
     <h1 class="font-semibold underline">TP directives</h1>
 
-    <button (click)="clikk()" class="btn btn-success"> clique-ici </button>
-
+    <button (click)="clikk()" class="btn btn-success"> 
+       
+        {{ statut ? 'Masquer les détails':'Afficher les détails'}}
+    
+    </button>
 
     <p *ngIf="statut===true">{{text}}</p>
 

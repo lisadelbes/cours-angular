@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 
 
 export class DirectivesParent {
-
+  
   text:string='Voici les détails du TP';
   statut:boolean = false;
   lesNombres:number[] = [];

@@ -1,0 +1,60 @@
+<div class="pokemon-container">
+  <h2>Pokémon Génération 1</h2>
+
+  <!-- Cas où les données ne sont pas encore chargées -->
+  <div *ngIf="!newData">
+    <p>Chargement...</p>
+  </div>
+
+  <!-- Grille de cartes Pokémon -->
+  <div class="pokemon-grid" *ngIf="newData">
+    <div class="pokemon-card" *ngFor="let pokemon of newData">
+      <img [src]="pokemon.sprites.regular" [alt]="pokemon.name.fr">
+      <h3>{{ pokemon.name.fr }}</h3>
+      <p>#{{ pokemon.pokedex_id }}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+.pokemon-container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.pokemon-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.pokemon-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+}
+
+.pokemon-card p {
+  margin: 0;
+  color: #666;
+}
+</style>
