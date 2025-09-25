@@ -38,6 +38,11 @@ export const routes: Routes = [
         path:'pokemon-list',
         loadComponent:()=> import('./pokemon-list/pokemon-list').then(m=>m.PokemonList)   
     },
+    {
+        path:'parent',
+        loadComponent:()=> import('./parent/parent').then(m=>m.Parent)   
+    },
+
 
     // mettre la page ERREUR à la fin
     {
