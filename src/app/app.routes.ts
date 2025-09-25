@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { Home } from './home/home';
+import { AuthGuardService } from './services/auth-guard.service';
 
 export const routes: Routes = [
     {
@@ -46,7 +47,19 @@ export const routes: Routes = [
         path:'firebase',
         loadComponent:()=> import('./task-list-firebase/task-list-firebase').then(m=>m.TaskListFirebase)   
     },
-
+    {
+        path:'login',
+        loadComponent:()=> import('./auth/login/login').then(m=>m.Login)   
+    },
+    {
+        path:'register',
+        loadComponent:()=> import('./auth/register/register').then(m=>m.Register)   
+    },
+    {
+        path:'dashboard',
+        canActivate: [AuthGuardService], // cette route est protégée
+        loadComponent:()=>import('./auth/dashboard/dashboard').then(m=>m.Dashboard)
+    },
 
     // mettre la page ERREUR à la fin
     {
