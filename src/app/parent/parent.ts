@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { Enfant } from '../enfant/enfant';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-parent',
-  imports: [Enfant, FormsModule],
+  imports: [Enfant, FormsModule, CommonModule],
   templateUrl: './parent.html',
   styleUrl: './parent.css'
 })

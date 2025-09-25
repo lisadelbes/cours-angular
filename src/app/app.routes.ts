@@ -42,6 +42,10 @@ export const routes: Routes = [
         path:'parent',
         loadComponent:()=> import('./parent/parent').then(m=>m.Parent)   
     },
+    {
+        path:'firebase',
+        loadComponent:()=> import('./task-list-firebase/task-list-firebase').then(m=>m.TaskListFirebase)   
+    },
 
 
     // mettre la page ERREUR à la fin

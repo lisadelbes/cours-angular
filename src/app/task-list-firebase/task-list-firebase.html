@@ -1,0 +1,12 @@
+<p>task-list-firebase works!</p>
+
+<div>
+<label for="to"> Liste</label>
+<input id="to" type="text" [(ngModel)]="newTask.title">
+<button (click)="addTask()"> Ajouter </button>
+
+<p *ngFor="let task of tasks">{{ task.title }} Status  : {{task.status}}</p>
+
+    
+</div>
+
